@@ -1,10 +1,12 @@
 import {cart, removeFromCart, saveCartInLocalStorage} from '../Js-files/cart.js';
 import { latestCollectionItems } from '../Js-files/latest-collections-items.js';
+import { bestSellers } from '../Js-files/best-sellers.js';
 import { all } from '../Js-files/all.js';
 import { menuIcon } from './login-page.js';
 
 menuIcon();
 let arrayName = latestCollectionItems.concat(all);
+arrayName = arrayName.concat(bestSellers);
 displayCart(arrayName);
 export function displayCart(arrayName){
     update(arrayName);
@@ -56,6 +58,7 @@ export function displayCart(arrayName){
         })
 
     imgListener();
+
     if (cart.length === 0){
 
         let element = document.querySelector('.payment-left-side');
@@ -66,6 +69,7 @@ export function displayCart(arrayName){
 
         let thirdElement = document.querySelector('.payment-left-side>:nth-child(3)')
 
+        // element.style.display = flex;
         element.style.opacity = 1;
         firstElement.style.opacity = 1;
         secElement.style.opacity = 1;
@@ -74,10 +78,12 @@ export function displayCart(arrayName){
         let paymentLeftSide = document.querySelector('.payment-left-side');
         let paymentDetails = document.querySelector('.cart-payment-container');
 
-        if (window.innerWidth <= 1120){
-            paymentLeftSide.classList.add('payment-left-side-extended');
-            paymentDetails.classList.add('cart-payment-container-extended');
-        }
+        paymentLeftSide.classList.add('payment-left-side-extended');
+        paymentDetails.classList.add('cart-payment-container-extended');
+        // if (window.innerWidth <= 1120){
+        //     paymentLeftSide.classList.add('payment-left-side-extended');
+        //     paymentDetails.classList.add('cart-payment-container-extended');
+        // }
         
         window.addEventListener('resize', () =>{
             if (window.innerWidth <= 1120){

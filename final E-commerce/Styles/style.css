@@ -253,7 +253,8 @@ body{
 }
 
 
-.latest-collections-grid-container{
+.latest-collections-grid-container,
+.best-sellers-grid-container{
     min-width: 315px;
     background-color: #e9ecef;
     background-color: #d2d8de; /*edited*/
@@ -271,7 +272,8 @@ body{
     column-gap: 30px;
     row-gap: 30px;
 }
-.latest-collections-grid-container .item{
+.latest-collections-grid-container .item,
+.best-sellers-grid-container .item{
     box-shadow: 0px 0px 15px #13333ee8;
     border-radius: 6px;
     cursor: pointer;
@@ -288,11 +290,13 @@ body{
     /* height: 450px; Increased height for .item */
     /* box-shadow: 0px 0px 20px rgba(0, 0, 0, .3); */
 }
-.latest-collections-grid-container .item .name{
+.latest-collections-grid-container .item .name,
+.best-sellers-grid-container .item .name{
     line-height: 23px;
     margin: 0px 8px 0px 8px;
 }
-.latest-collections-grid-container .img{
+.latest-collections-grid-container .img,
+.best-sellers-grid-container .img{
     /* width: 200px;
     height: 236px; */
     width: 100%; /* Full width */
@@ -305,35 +309,42 @@ body{
     overflow: hidden;
 
 }
-.latest-collections-grid-container .img img{
+.latest-collections-grid-container .img img,
+.best-sellers-grid-container .img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform .3s ease;
     /* height: 175px; */
 }
-.latest-collections-grid-container .img img:hover{
+.latest-collections-grid-container .img img:hover,
+.best-sellers-grid-container .img img:hover{
     transform: scale(1.05);
 }
-.latest-collections-grid-container .item .rating{
+.latest-collections-grid-container .item .rating,
+.best-sellers-grid-container .item .rating{
     display: flex;
     align-items: center;
     column-gap: 4px;
     margin: 0px 8px 8px 8px;
 }
-.latest-collections-grid-container .item .rating>:nth-child(2){
+.latest-collections-grid-container .item .rating>:nth-child(2),
+.best-sellers-grid-container .item .rating>:nth-child(2){
     color: rgb(0, 113, 133);
 }
-.latest-collections-grid-container .item .rating>:first-child{
+.latest-collections-grid-container .item .rating>:first-child,
+.best-sellers-grid-container .item .rating>:first-child{
     vertical-align: bottom;
     font-size: 24px;
     letter-spacing: 2px;
     color: #FF9900;
 }
-.latest-collections-grid-container .item .rating>:nth-child(2){
+.latest-collections-grid-container .item .rating>:nth-child(2),
+.best-sellers-grid-container .item .rating>:nth-child(2){
     padding-top: 6.5px;
 }
-.latest-collections-grid-container .item .price{
+.latest-collections-grid-container .item .price,
+.best-sellers-grid-container .item .price{
     font-weight: 600;
     margin-left: 8px;
     margin-bottom: 14px;

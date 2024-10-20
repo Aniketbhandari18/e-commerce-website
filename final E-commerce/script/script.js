@@ -1,9 +1,11 @@
 import {latestCollectionItems} from '../Js-files/latest-collections-items.js';
 import {cart, addToCart} from '../Js-files/cart.js';
 import { menuIcon } from './login-page.js';
+import { bestSellers } from '../Js-files/best-sellers.js';
 // import { moveToDisplayProduct } from './product-details.js';
 menuIcon();
 createHtml(latestCollectionItems, "latest-collections");
+createHtml(bestSellers, "best-sellers");
 export function createHtml(collectionItems, name){
     let generatedHtml = '';
 
@@ -74,33 +76,24 @@ document.querySelectorAll('.add-to-cart-button')
 
 
     
-document.querySelectorAll(`.item`)
-    .forEach((div) =>{
-        div.addEventListener('click', () =>{
+    document.querySelectorAll(`.item`)
+    .forEach((div) => {
+        div.addEventListener('click', () => {
             let divData = div.dataset.jsItem;
-            // console.log(divData);
+
+            let parentContainer = div.closest('.latest-collections-grid-container, .best-sellers-grid-container');
+            
+            if (parentContainer.classList.contains('latest-collections-grid-container')) {
+                localStorage.setItem('arrayName', JSON.stringify(latestCollectionItems));
+            } else if (parentContainer.classList.contains('best-sellers-grid-container')) {
+                localStorage.setItem('arrayName', JSON.stringify(bestSellers));
+            }
+
             localStorage.setItem('selectedProduct', divData);
-            localStorage.setItem('arrayName', JSON.stringify(latestCollectionItems));
-            // displayProduct(divData);
             window.location.href = 'product-details.html';
-            // divData here is name of product in cart
-        })
-    })
+        });
+    });
 
-stopAnimation();
-function stopAnimation(){
-    let one = document.querySelector('.one');
-    let two = document.querySelector('.two');
-    let three = document.querySelector('.three'); 
-    let four = document.querySelector('.four'); 
-
-    window.addEventListener('resize', () =>{
-        one.style.animation = 'none';
-        two.style.animation = 'none';
-        three.style.animation = 'none';
-        four.style.animation = 'none';
-    })
-}
 
 
 

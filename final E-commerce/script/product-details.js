@@ -1,6 +1,7 @@
 import { addToCart } from "../Js-files/cart.js";
 import { latestCollectionItems } from "../Js-files/latest-collections-items.js";
 import { menuIcon } from './login-page.js';
+import { bestSellers } from "../Js-files/best-sellers.js";
 
 menuIcon();
 
