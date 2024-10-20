@@ -319,3 +319,7 @@ a:hover{
     margin-right: 33px;
     width: 134px;
 }
+
+.center-side div a{
+    color: white;
+}
