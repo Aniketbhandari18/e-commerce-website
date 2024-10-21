@@ -1,8 +1,8 @@
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-});
+// window.addEventListener('pageshow', function(event) {
+//     if (event.persisted) {
+//         window.location.reload();
+//     }
+// });
 
 
 export let cart = JSON.parse(localStorage.getItem('cart'));
@@ -14,6 +14,7 @@ export function saveCartInLocalStorage(){
 }
 
 export function addToCart(name){
+    // cart = JSON.parse(localStorage.getItem('cart'));
     let element;
 
     cart.forEach((value) => {

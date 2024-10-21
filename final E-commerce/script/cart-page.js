@@ -1,8 +1,8 @@
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-});
+// window.addEventListener('pageshow', function(event) {
+//     if (event.persisted) {
+//         window.location.reload();
+//     }
+// });
 
 
 import {cart, removeFromCart, saveCartInLocalStorage} from '../Js-files/cart.js';
