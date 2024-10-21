@@ -9,6 +9,8 @@ let arrayName = latestCollectionItems.concat(all);
 arrayName = arrayName.concat(bestSellers);
 displayCart(arrayName);
 export function displayCart(arrayName){
+    cart = JSON.parse(localStorage.getItem('cart'));
+
     update(arrayName);
 
     let generatedHtml = ``;
