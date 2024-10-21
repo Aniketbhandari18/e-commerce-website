@@ -9,7 +9,6 @@ let arrayName = latestCollectionItems.concat(all);
 arrayName = arrayName.concat(bestSellers);
 displayCart(arrayName);
 export function displayCart(arrayName){
-
     update(arrayName);
 
     let generatedHtml = ``;

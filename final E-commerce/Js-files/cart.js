@@ -28,7 +28,6 @@ export function addToCart(name){
 }
 
 export function removeFromCart(name){
-
     let newCart = [];
     cart.forEach((value) =>{
         if (value.name !== name){
