@@ -1,4 +1,8 @@
-
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
 
 
 export let cart = JSON.parse(localStorage.getItem('cart'));

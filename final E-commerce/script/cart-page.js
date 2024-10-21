@@ -1,3 +1,10 @@
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
+
+
 import {cart, removeFromCart, saveCartInLocalStorage} from '../Js-files/cart.js';
 import { latestCollectionItems } from '../Js-files/latest-collections-items.js';
 import { bestSellers } from '../Js-files/best-sellers.js';
