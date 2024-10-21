@@ -7,6 +7,7 @@ export function saveCartInLocalStorage(){
 }
 
 export function addToCart(name){
+    cart = JSON.parse(localStorage.getItem('cart'));
     let element;
 
     cart.forEach((value) => {
@@ -28,6 +29,8 @@ export function addToCart(name){
 }
 
 export function removeFromCart(name){
+    cart = JSON.parse(localStorage.getItem('cart'));
+
     let newCart = [];
     cart.forEach((value) =>{
         if (value.name !== name){
